@@ -1,0 +1,18 @@
+<p-menubar [model]="items">
+  <div class="p-d-inline-flex p-flex-wrap">
+
+      <div class="p-d-inline p-mr-2" data-tooltip="Home" routerLink="/auth/admin">
+        <i class="pi pi-home" style="color: white"></i>
+      </div>
+
+      <div class="p-d-inline p-mr-2" data-tooltip="Logout" >
+        <i class="pi pi-sign-out" (click)="logout()"></i>
+      </div>
+
+      <div class="p-d-inline p-mr-2" tabindex="0" routerLink="/auth/messages">
+        <div data-tooltip="View Messages">
+          <i pBadge *ngIf="messagesCount$ | async as messageCount" class="pi pi-envelope p-text-secondary" value="{{ messageCount.length }}"></i>
+        </div>
+      </div>
+  </div>
+</p-menubar>

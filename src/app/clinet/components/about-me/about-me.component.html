@@ -1,0 +1,33 @@
+<div class="p-grid p-jc-center">
+  <div *ngFor="let profile of $profile | async" style="margin-top: 10px;">
+    <div class="p-col-10">
+      <p-card
+        header="{{ profile.firstName }} {{ profile.lastName }}"
+        subheader="{{ profile.jobTitle }}"
+        styleClass="p-card-shadow"
+        [style]="{'width': '25rem'}"
+        >
+        <ng-template pTemplate="header" >
+          <img src="{{ profile.downloadUrl }}" />
+        </ng-template>
+        Currently: {{ profile.jobTitle }} at {{ profile.companyName }}
+        <p-divider type="dashed"></p-divider>
+        Coding since: {{ profile.startYear }}
+      </p-card>
+    </div>
+  </div>
+</div>
+<div class="p-grid">
+  <div class="p-col-10 p-offset-1 " *ngFor="let profile of $profile | async" style="margin-top: 10px;">
+    <p-divider align="center">
+      <div class="p-text-uppercase p-text-light" style="color: white">
+        About Me
+      </div>
+    </p-divider>
+    <p-card>
+        <div class="p-text-center" >
+          <p>{{ profile.aboutMe }}</p>
+        </div>
+    </p-card>
+  </div>
+</div>

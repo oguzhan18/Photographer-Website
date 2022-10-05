@@ -1,0 +1,38 @@
+<div class="p-grid">
+  <div class="p-col-10 p-offset-1 p-d-flex-block">
+    <p-divider align="center">
+      <div class="p-text-uppercase p-text-light" style="color: white;">Skills</div>
+    </p-divider>
+
+    <button class="ui labeled icon button green" (click)="showModal()">
+      <i class="add icon"></i>
+      Add a new skill
+    </button>
+
+    <div class="ui list" *ngFor="let skill of $skills | async" >
+      <div class="item">
+        <img class="ui avatar image" src="{{ skill.skillImgUrl }}" [style]="{'width': '10rem'}">
+        <div class="content">
+          <a class="header">{{ skill.skillName }}</a>
+          <div class="description"> Skill Level: {{ skill.skillLevel }}</div>
+        </div>
+        <div class="right floated content">
+          <div class="ui buttons">
+            <button class="ui primary button" (click)="editModal(skill)">Edit</button>
+            <div class="or"></div>
+            <button class="ui negative button" (click)="removeSkill(skill.id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <app-form-modal
+      *ngIf="this.formModalContent.isVisible"
+      (close)="this.formModalContent.isVisible = null"
+      [formModalInputs]="formModalContent"
+      (submit)="addSkill($event)"
+      (edit)="editSkill($event)"
+    ></app-form-modal>
+  </div>
+
+</div>

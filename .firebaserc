@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "rwengelbrecht-portfolio": {
+      "hosting": {
+        "za-co-rwengelbrecht": [
+          "rwengelbrecht-portfolio"
+        ]
+      }
+    }
+  }
+}

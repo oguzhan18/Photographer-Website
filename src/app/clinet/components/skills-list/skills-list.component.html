@@ -1,0 +1,18 @@
+<!-- TODO: update classes to use primeng -->
+<div class="p-grid">
+  <div class="p-col-10 p-offset-1">
+    <p-divider align="center">
+      <div class="p-text-uppercase p-text-light" style="color: white" id="skills">Skills</div>
+    </p-divider>
+    <div class="p-d-inline-flex p-flex-wrap" *ngFor="let skill of skills | async">
+      <p-card class="p-d-inline p-mr-2 p-mb-2"  [style]="{'width': '10rem'}">
+        <div class="p-text-center">
+          <p-avatar class="p-mb-2 p-d-block" image="{{ skill.skillImgUrl }}" size="xlarge"></p-avatar>
+          <div class="p-d-block">
+            {{ skill.skillName }}
+          </div>
+        </div>
+      </p-card>
+    </div>
+  </div>
+</div>

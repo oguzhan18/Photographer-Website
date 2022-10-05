@@ -1,0 +1,66 @@
+<!-- TODO: implement tooltips for errors -->
+<div class="p-grid">
+  <div class="p-col-10 p-offset-1">
+    <p-divider align="center">
+      <div class="p-text-uppercase p-text-light" style="color: white">Contact Me</div>
+    </p-divider>
+    <div class="">
+      <p-messages></p-messages>
+      <form [ngClass]="formClassState" [formGroup]="contactMeForm" (ngSubmit)="sendEmail()">
+        <div class="p-fluid p-grid">
+          <div class="p-col-12 p-md-6">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input
+                pInputText
+                pTooltip="Your name must have at least 2 characters."
+                tooltipPosition="top"
+                tooltipEvent="focus"
+                placeholder="Your name"
+                type="text"
+                formControlName="name">
+            </div>
+          </div>
+
+          <div class="p-col-12 p-md-6">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-envelope"></i></span>
+              <input
+                pInputText
+                placeholder="Email address"
+                pTooltip="Must be a valid email address."
+                tooltipPosition="top"
+                tooltipEvent="focus"
+                formControlName="email"
+                type="email">
+            </div>
+          </div>
+
+          <div class="p-col-12">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-phone"></i></span>
+              <input placeholder="Contact number (Optional)" formControlName="contactNumber" type="text" pInputText maxlength="10">
+            </div>
+          </div>
+
+          <div class="p-col-12">
+            <div class="p-inputgroup">
+              <textarea
+                pInputTextarea
+                pTooltip="Message must have a minimum of 10 and maximum of 200 characters."
+                tooltipPosition="top"
+                tooltipEvent="focus"
+                inputId="message"
+                autoResize="autoResize"
+                placeholder="Message"
+                formControlName="message"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <button pButton pRipple class="p-button-raised p-button-secondary" type="submit" [disabled]="!contactMeForm.valid">Send Email</button>
+      </form>
+
+    </div>
+  </div>
+</div>

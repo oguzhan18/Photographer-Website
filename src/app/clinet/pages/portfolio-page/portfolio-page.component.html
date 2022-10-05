@@ -1,0 +1,93 @@
+<!-- <app-header></app-header>
+<app-about-me></app-about-me>
+<app-projects-list></app-projects-list>
+<app-skills-list></app-skills-list>
+<app-tools-list></app-tools-list>
+<app-contact-form></app-contact-form> -->
+<nav>
+  <div class="logo">
+    <img src="../../../../assets/image/logo/lightLogo.png" class="logoImage" alt="">
+  </div>
+  <div class="nav_bar">
+    <ul>
+      <li><a id="active" href="">ANA SAYFA</a></li>
+      <li><a routerLink="/upload">GALERİ H</a></li>
+      <!-- <li><a routerLink="test-ad" [routerLink]="['test-ad']">GALERİ AD</a></li>
+      <li><a  [routerLink]="['test-ap']">GALERİ AP</a></li> -->
+    </ul>
+  </div>
+</nav>
+<main>
+  <section class="introduction">
+    <img class="profile_pic"
+      src="https://images.unsplash.com/photo-1605076896228-086cda8868c9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+      alt="" srcset="">
+    <div class="intro">
+      <div class="intro">
+        <div class="name">Ayşegül Doğudu Akça</div>
+        <div class="name"><span>Fotoğraf Sanatçısı</span></div> <br>
+        <button class="portfolio_button" ><span routerLinkActive="test" routerLink="test">PORTFÖYÜM</span> </button>
+      </div>
+    </div>
+  </section>
+  <section class="about_me_section">
+    <div class="about_me">
+      <h1>Sana biraz kendimden bahsedeyim</h1><br><br>
+      <p>Merhaba ben Ayşegül. Fotoğraf sanatçısıyım hobi ile başladığım fotoğraf sanatında kendimi geliştirmekteyim.
+        Doğa ve günlük yaşamdan hayatımda bulunan ve gördüğüm tüm sanat bütünlüğünü objektifime yakalayabildiğim
+        zamanlarda omları birer sanat eserine dönüştürerek eserlerime katmaktayım. </p>
+    </div>
+    <img id="about_me_image" src="../../../../assets/image/profile/real.png" alt=""
+      srcset="">
+  </section>
+  <!-- <section class="photography">
+    <h1>Çevre Ve Doğa Resimleri</h1>
+    <ng-container *ngIf="employees$">
+      <ul>
+        <li *ngFor="let employee of employees$ ">
+          <img [src]="employee.imagen" alt="" width="100" height="100" />
+          {{ employee.name }}
+        </li>
+      </ul>
+    </ng-container>
+  </section>
+  <section class="photography">
+    <h1>WILDLIFE PHOTOGRAPHY</h1>
+    <div class="images">
+      <img id="image"
+        src="https://images.unsplash.com/photo-1561627855-94b0aaa2e4dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+        alt="" srcset="">
+      <img id="image"
+        src="https://images.unsplash.com/photo-1484406566174-9da000fda645?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=635&q=80"
+        alt="" srcset="">
+      <img id="image"
+        src="https://images.unsplash.com/photo-1545006398-2cf47cd87b90?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=615&q=80"
+        alt="" srcset="">
+      <img id="image"
+        src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+        alt="" srcset="">
+    </div>
+  </section>
+  <section class="photography">
+    <h1>WEDDING PHOTOGRAPHY</h1>
+    <div class="images">
+      <img id="image"
+        src="https://images.unsplash.com/photo-1546032996-6dfacbacbf3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=655&q=80"
+        alt="" srcset="">
+      <img id="image"
+        src="https://images.unsplash.com/photo-1580151134699-e0cfbeb763d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80"
+        alt="" srcset="">
+      <img id="image"
+        src="https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+        alt="" srcset="">
+      <img id="image"
+        src="https://images.unsplash.com/photo-1603214924133-5c2c78471b73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=800"
+        alt="" srcset="">
+    </div>
+  </section> -->
+</main>
+<footer>
+  <a href="#">ANA SAYFA</a>
+  <a routerLink="/list">GALERİ</a>
+  <a href="https://www.linkedin.com/in/o%C4%9Fuzhan-%C3%A7art-b73405199">OĞUZHAN ÇART  &copy; 2022 </a>
+</footer>

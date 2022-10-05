@@ -1,0 +1,52 @@
+<div class="p-grid">
+  <div class="p-col-10 p-offset-1 p-d-flex-block" *ngFor="let profile of $profile | async">
+
+
+    <div class="p-text-center">
+      <p-card>
+        <div class="image">
+          <img src="{{ profile.downloadUrl }}" />
+        </div>
+        <p-card-content>
+          <div class="header">{{ profile.firstName }} {{ profile.lastName }}</div>
+          <div class="meta">
+            <a>{{ profile.jobTitle }}</a>
+          </div>
+          <div class="description">
+            Currently: {{ profile.jobTitle }} at {{ profile.company }}
+          </div>
+          <p-divider type="dashed"></p-divider>
+          <div class="">
+              Coding since: {{ profile.startYear }}
+          </div>
+        </p-card-content>
+      </p-card>
+
+      <div class="ui left icon input error">
+        <input type="file" (change)="uploadImage($event, profile.id)" id="embedpollfileinput" placeholder="Select image to set as profile pic">
+        <i class="pi pi-folder-open"></i>
+        <div>{{ uploadPercent | async }}</div>
+      </div>
+    </div>
+    <p-divider align="center" >
+      <div class="p-text-uppercase p-text-light" style="color: white;" id="aboutMe">About Me</div>
+    </p-divider>
+    <div class="ui segment">
+      <p>{{ profile.aboutMe }}</p>
+    </div>
+    <button  type="button" class="p-button-secondary" (click)="editModal(profile)">
+      Edit Profile
+    </button>
+
+
+
+  </div>
+
+
+  <app-form-modal
+    *ngIf="this.formModalContent.isVisible"
+    (close)="this.formModalContent.isVisible = null"
+    [formModalInputs]="formModalContent"
+    (edit)="editProfile($event)"
+  ></app-form-modal>
+</div>
