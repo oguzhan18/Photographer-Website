@@ -29,6 +29,7 @@ import {TooltipModule} from 'primeng/tooltip';
 import {MessageService} from 'primeng/api';
 import {MessagesModule} from 'primeng/messages';
 import { HomeComponent } from '../app/clinet/pages/home/home.component';
+import { FooterComponent } from './clinet/components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { HomeComponent } from '../app/clinet/pages/home/home.component';
     SkillsListComponent,
     ToolsListComponent,
     HomeComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
