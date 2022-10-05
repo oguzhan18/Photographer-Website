@@ -30,6 +30,7 @@ import {MessageService} from 'primeng/api';
 import {MessagesModule} from 'primeng/messages';
 import { HomeComponent } from '../app/clinet/pages/home/home.component';
 import { FooterComponent } from './clinet/components/footer/footer.component';
+import { GalleryComponent } from './clinet/pages/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { FooterComponent } from './clinet/components/footer/footer.component';
     ToolsListComponent,
     HomeComponent,
     FooterComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
