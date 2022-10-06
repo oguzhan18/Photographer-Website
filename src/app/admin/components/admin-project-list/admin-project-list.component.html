@@ -2,12 +2,12 @@
   <div class="p-col-10 p-offset-1 p-d-flex-block">
     <p-divider align="center" >
       <div style="color: white;" class="p-text-uppercase p-text-light">
-        Projects
+        Galeri
       </div>
     </p-divider>
-    <button class="ui labeled icon button green" (click)="showModal()">
-      <i class="add icon"></i>
-      Add a new project
+    <button class="ui labeled icon button green" (click)="showModal()" >
+      <i class="pi pi-plus p-text-dark"></i>
+      Galeri Ekle
     </button>
     <div class="ui list" *ngFor="let project of $projects | async">
       <div class="item">
@@ -18,9 +18,9 @@
         </div>
         <div class="right floated content">
           <div class="ui buttons">
-            <button class="ui primary button" (click)="editModal(project)">Edit</button>
+            <button class="ui primary button" (click)="editModal(project)">Düzenle</button>
             <div class="or"></div>
-            <button class="ui negative button" (click)="removeProject(project.id)">Delete</button>
+            <button class="ui negative button" (click)="removeProject(project.id)">Sil</button>
           </div>
         </div>
       </div>

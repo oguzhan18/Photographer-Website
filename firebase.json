@@ -1,8 +1,8 @@
 {
   "hosting": [
     {
-      "target": "za-co-rwengelbrecht",
-      "public": "dist/za-co-rwengelbrecht",
+      "target": "PhotographerWebsite",
+      "public": "dist/PhotographerWebsite",
       "ignore": [
         "**/.*"
       ],

@@ -2,7 +2,7 @@
   "targets": {
     "rwengelbrecht-portfolio": {
       "hosting": {
-        "za-co-rwengelbrecht": [
+        "PhotographerWebsite": [
           "rwengelbrecht-portfolio"
         ]
       }

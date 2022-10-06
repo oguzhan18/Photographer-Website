@@ -1,10 +1,9 @@
-<!-- TODO: implement tooltips for errors -->
-<div class="p-grid">
+ <div class="p-grid">
   <div class="p-col-10 p-offset-1">
     <p-divider align="center">
-      <div class="p-text-uppercase p-text-light" style="color: white">Contact Me</div>
+      <div class="p-text-uppercase p-text-light" style="color: white; ">İletiişim için</div>
     </p-divider>
-    <div class="">
+    <div>
       <p-messages></p-messages>
       <form [ngClass]="formClassState" [formGroup]="contactMeForm" (ngSubmit)="sendEmail()">
         <div class="p-fluid p-grid">
@@ -13,7 +12,7 @@
               <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
               <input
                 pInputText
-                pTooltip="Your name must have at least 2 characters."
+                pTooltip="En az iki karakter içeren bir isim girmek zorundasınız"
                 tooltipPosition="top"
                 tooltipEvent="focus"
                 placeholder="Your name"

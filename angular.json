@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "za-co-rwengelbrecht": {
+    "PhotographerWebsite": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/za-co-rwengelbrecht",
+            "outputPath": "dist/PhotographerWebsite",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "za-co-rwengelbrecht:build"
+            "browserTarget": "PhotographerWebsite:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "za-co-rwengelbrecht:build:production"
+              "browserTarget": "PhotographerWebsite:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "za-co-rwengelbrecht:build"
+            "browserTarget": "PhotographerWebsite:build"
           }
         },
         "test": {
@@ -119,11 +119,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "za-co-rwengelbrecht:serve"
+            "devServerTarget": "PhotographerWebsite:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "za-co-rwengelbrecht:serve:production"
+              "devServerTarget": "PhotographerWebsite:serve:production"
             }
           }
         },
@@ -134,7 +134,7 @@
       }
     }
   },
-  "defaultProject": "za-co-rwengelbrecht",
+  "defaultProject": "PhotographerWebsite",
   "cli": {
     "analytics": "902b3081-93f3-451a-ab9a-4437491e6280"
   }

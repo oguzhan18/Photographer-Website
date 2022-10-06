@@ -19,7 +19,6 @@
   </div>
 </div> -->
 
-<h1 class="text-center"> Yapmış Olduğum Nacizane Eserlerin </h1>
 <!-- kk -->
 
 <!-- <div class="box" *ngFor="let project of $projects | async">
@@ -34,3 +33,24 @@
     </div>
   </a>
 </div> -->
+
+<section class="our-blog">
+  <div class="container">
+    <div class="text-center">
+      <h2>Eserlerim</h2>
+      <p>Günlük Hayatımdan Objektifime Giren Tüm Eserlerimi Sergilediğim Koleksiyonum...</p>
+    </div>
+    <div class="row mt-5">
+      <div class="col" *ngFor="let project of $projects | async">
+        <div class="card">
+          <img src="{{ project.projectIconUrl }}" alt="">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="#"> {{ project.projectName }} </a>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -13,7 +13,6 @@ export class ContactFormComponent implements OnInit {
 
   isLoading = false;
   isSuccessful = false;
-  //TODO: will likely have to find different way to do this with primeng
   formClassState = 'ui equal width form segment';
 
   contactMeForm = new FormGroup({
