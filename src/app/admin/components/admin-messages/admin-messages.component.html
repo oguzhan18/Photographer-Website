@@ -2,7 +2,7 @@
   <div class="ui center basic segment">
 
     <div class="ui horizontal divider">
-      <h1 id="aboutMe">My Messages</h1>
+      <h1 id="aboutMe">Mesajlarım</h1>
     </div>
 
     <div class="ui divided list" *ngFor="let message of messageList$ | async">
@@ -13,11 +13,11 @@
             <div class="close icon">
               <button class="ui button" (click)="toggleRead(message)">
                 <i [ngClass]="message.read ? 'left float blue envelope open icon' : 'left float green envelope icon'"></i>
-                {{ message.read ? 'Mark as unread' : 'Mark as read' }}
+                {{ message.read ? 'okunmamış olarak işaretle' : 'Okundu olarak işaretle' }}
               </button>
               <button class="ui button" (click)="deleteMessage(message)">
                 <i class="minus circle red icon"></i>
-                Delete Message
+               Mesajı Sil
               </button>
             </div>
           </div>
@@ -25,11 +25,10 @@
           <div class="row">
             <div class="header">
               <p>
-                Name: {{ message.name }} <br>
-                Date: {{ message.date | date: 'dd-MM-yyyy' }} <br>
-                Contact Number: {{ message.contactNumber }} <br>
-                Email: {{ message.email }} <br>
-                Message: {{ message.message }} <br>
+                İSİM: <br> {{ message.name }} <br><br>
+                TELEFON NUMARASI: <br>{{ message.contactNumber }} <br> <br>
+                EMAİL: <br> {{ message.email }} <br><br>
+                MESAJ: <br> {{ message.message }} <br><br>
               </p>
             </div>
           </div>
