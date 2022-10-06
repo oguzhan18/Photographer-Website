@@ -1,7 +1,7 @@
 <div class="p-grid">
   <div class="p-col-10 p-offset-1">
     <p-divider align="center">
-      <div class="p-text-uppercase p-text-light" style="color: white;">Admin Login</div>
+      <div class="p-text-uppercase p-text-light" style="color: white;">Admin  Giriş</div>
     </p-divider>
     <div class="p-shadow-4">
       <form style="padding: 10px" [formGroup]="login" (ngSubmit)="onSubmit()">
@@ -9,17 +9,17 @@
           <div class="p-col-12 p-md-6">
             <div class="p-inputgroup">
               <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-              <input pInputText type="email" formControlName="username" placeholder="Not me? Might as well leave now...">
+              <input pInputText type="email" formControlName="username" placeholder="email">
             </div>
           </div>
           <div class="p-col-12 p-md-6">
             <div class="p-inputgroup">
               <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
-              <input pInputText type="password" formControlName="password" placeholder="Super secret password">
+              <input pInputText type="password" formControlName="password" placeholder="şifre">
             </div>
           </div>
         </div>
-        <button pButton pRipple class="p-button-raised p-button-secondary" type="submit">Login</button>
+        <button pButton pRipple class="p-button-raised p-button-secondary" type="submit">Giriş</button>
       </form>
     </div>
   </div>

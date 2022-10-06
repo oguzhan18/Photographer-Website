@@ -13,7 +13,7 @@ export class ContactFormComponent implements OnInit {
 
   isLoading = false;
   isSuccessful = false;
-  formClassState = 'ui equal width form segment';
+  formClassState = 'ui eşit genişlikte form yükleme segmenti';
 
   contactMeForm = new FormGroup({
     name: new FormControl('', [
@@ -48,7 +48,7 @@ export class ContactFormComponent implements OnInit {
     this.toggleLoading();
     this.dataService.saveContactDetails(this.contactMeForm.value)
       .then(() => {this.toggleSuccess()})
-      .catch(err => console.error('Something went wrong: ', err))
+      .catch(err => console.error('Bir şeyler yanlış gitti: ', err))
       .finally(() => {
         this.contactMeForm.reset()
         if (!this.isSuccessful) { this.toggleLoading(); }
@@ -58,10 +58,10 @@ export class ContactFormComponent implements OnInit {
   public toggleLoading() {
     if (!this.isLoading) {
       this.isLoading = true;
-      this.formClassState = 'ui equal width form loading segment';
+      this.formClassState = 'ui eşit genişlikte form yükleme segmenti';
     } else {
       this.isLoading = false;
-      this.formClassState = 'ui equal width form segment'
+      this.formClassState = 'ui eşit genişlikte form yükleme segmenti'
     }
   }
 
@@ -70,18 +70,18 @@ export class ContactFormComponent implements OnInit {
       this.isSuccessful = true;
       this.messageService.add({
         severity: 'info',
-        summary:'Success',
-        detail:'You have sent me a message. Thanks for reaching out!'
+        summary:'Başarılı',
+        detail:'Bana bir mesaj gönderdin. Bize ulaştığınız için teşekkürler!'
       });
-      // this.formClassState = 'ui equal width form segment success';
+      // this.formClassState = 'ui eşit genişlikte form yükleme segmenti success';
     } else {
       this.isSuccessful = false;
       this.messageService.add({
         severity: 'error',
-        summary:'Error',
-        detail:'Something went wrong while trying to send that. Try again?'
+        summary:'Başarısız',
+        detail:'Sanırmı bir şeyler yanlış gitti, tekrar denemek ister misin?'
       });
-      // this.formClassState = 'ui equal width form segment'
+      // this.formClassState = 'ui eşit genişlikte form yükleme segmenti'
     }
   }
 

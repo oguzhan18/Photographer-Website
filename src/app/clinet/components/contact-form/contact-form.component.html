@@ -15,7 +15,7 @@
                 pTooltip="En az iki karakter içeren bir isim girmek zorundasınız"
                 tooltipPosition="top"
                 tooltipEvent="focus"
-                placeholder="Your name"
+                placeholder="İsim"
                 type="text"
                 formControlName="name">
             </div>
@@ -26,8 +26,8 @@
               <span class="p-inputgroup-addon"><i class="pi pi-envelope"></i></span>
               <input
                 pInputText
-                placeholder="Email address"
-                pTooltip="Must be a valid email address."
+                placeholder="Email Adresi"
+                pTooltip="Uygun bir email formatı ile email yazmak zorundasınız"
                 tooltipPosition="top"
                 tooltipEvent="focus"
                 formControlName="email"
@@ -38,7 +38,7 @@
           <div class="p-col-12">
             <div class="p-inputgroup">
               <span class="p-inputgroup-addon"><i class="pi pi-phone"></i></span>
-              <input placeholder="Contact number (Optional)" formControlName="contactNumber" type="text" pInputText maxlength="10">
+              <input placeholder="Telefon numarası" formControlName="contactNumber" type="text" pInputText maxlength="10">
             </div>
           </div>
 
@@ -46,18 +46,18 @@
             <div class="p-inputgroup">
               <textarea
                 pInputTextarea
-                pTooltip="Message must have a minimum of 10 and maximum of 200 characters."
+                pTooltip="Göndereceğiniz Mesaj en az 10 karakter, En Fazla 200 karakter olmalıdır."
                 tooltipPosition="top"
                 tooltipEvent="focus"
                 inputId="message"
                 autoResize="autoResize"
-                placeholder="Message"
+                placeholder="Mesaj"
                 formControlName="message"
               ></textarea>
             </div>
           </div>
         </div>
-        <button pButton pRipple class="p-button-raised p-button-secondary" type="submit" [disabled]="!contactMeForm.valid">Send Email</button>
+        <button pButton pRipple class="p-button-raised p-button-secondary" type="submit" [disabled]="!contactMeForm.valid">Gönder</button>
       </form>
 
     </div>
